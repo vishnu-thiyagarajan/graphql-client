@@ -29,7 +29,7 @@ const authLink = setContext((_, { headers }) => {
 httpLink = authLink.concat(httpLink);
 
 const wsLink = new WebSocketLink({
-  uri: `ws://chatgraphqlserver.herokuapp.com/graphql`,
+  uri: `wss://chatgraphqlserver.herokuapp.com/graphql`,
   options: {
     reconnect: true,
     connectionParams: {
